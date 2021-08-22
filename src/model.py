@@ -4,7 +4,6 @@ from scipy.spatial import distance
 from sentence_transformers import SentenceTransformer
 
 
-
 class Sentence:
     """
     A class used to represent a sentence, cosine similarity and its embedding.
@@ -94,7 +93,6 @@ class SimilarSentences:
         self.model = SentenceTransformer(model_name)
         self.load_dataset()
 
-
     def load_dataset(self):
         """
         Loads sentence from dataset and adds into sentence_list
@@ -138,7 +136,7 @@ class SimilarSentences:
         -------
         top_n_sentences(list) : list of top n sentences based on the input sentence
         """
-        
+
         self.top_n_sentences = []
         self.priorityque = PriorityQueue()
         embedding = self.get_embeddings(sentence)
